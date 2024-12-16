@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Category Result</title>
+  </head>
+  <body>
+    <ul>
+      <% pokemonSpCategories.forEach(pokemon => { %>
+      <li>
+        <%= pokemon.id %> -- <%= pokemon.pokemon %> -- <%= pokemon.trainer %> --
+        <%= pokemon.type %>
+      </li>
+      <a
+        href="/update?id=<%=pokemon.id%>&pokemon=<%=pokemon.pokemon%>&trainer=<%=pokemon.trainer%>&type=<%=pokemon.type%>"
+        ><button>Update</button>
+      </a>
+      <form action="/delete?id=<%=pokemon.id%>" method="post">
+        <button type="submit">Delete</button>
+      </form>
+      <% }) %>
+    </ul>
+  </body>
+</html>

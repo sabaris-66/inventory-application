@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Update Pokemon</title>
+  </head>
+  <body>
+    <form action="/update?id=<%=id%>" method="post">
+      <label for="pokemon"
+        ><input type="text" id="pokemon" name="pokemon" value="<%= pokemon %>"
+      /></label>
+      <label for="trainer"
+        ><input type="text" id="trainer" name="trainer" value="<%= trainer %>"
+      /></label>
+      <label for="type"
+        ><input type="text" id="type" name="type" value="<%=type%>"
+      /></label>
+      <button type="submit">Update</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Categories</title>
+  </head>
+  <body>
+    <div>Types of Pokemon available in our inventory</div>
+    <ul>
+      <% pokemonCategories.forEach(pokemon => { %>
+      <a href="/spCategories?spCategory=<%=pokemon.type%>">
+        <li><%= pokemon.type %></li>
+      </a>
+      <% }) %>
+    </ul>
+  </body>
+</html>

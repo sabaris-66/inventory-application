@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head style="display: none">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Pokemon Inventory</title>
+  </head>
+  <body>
+    <a href="/create">Add New Pokemon and its trainer</a>
+    <br />
+    <form action="/search" method="get">
+      <input
+        type="text"
+        name="search"
+        placeholder="Enter Search Text"
+        required
+      />
+      <button type="submit">Search</button>
+      <br />
+    </form>
+    <a href="/categories">Categories</a>
+    <br />
+    <br />
+    <ul>
+      <% pokemons.forEach(pokemon => { %>
+      <li>
+        <%= pokemon.id %> -- <%= pokemon.pokemon %> -- <%= pokemon.trainer %> --
+        <%= pokemon.type %>
+        <a
+          href="/update?id=<%=pokemon.id%>&pokemon=<%=pokemon.pokemon%>&trainer=<%=pokemon.trainer%>&type=<%=pokemon.type%>"
+          ><button>Update</button>
+        </a>
+        <form action="/delete?id=<%=pokemon.id%>" method="post">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Add New Pokemon</title>
+  </head>
+  <body>
+    <form action="/create" method="post">
+      <input
+        type="text"
+        placeholder="Enter Pokemon Name"
+        name="pokemon"
+        required
+      />
+      <input
+        type="text"
+        placeholder="Enter Trainer Name"
+        name="trainer"
+        required
+      />
+      <input type="text" placeholder="Enter Type" name="type" required />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
