@@ -1,4 +1,4 @@
 const { Pool } = require("pg");
 module.exports = new Pool({
-  connectionString: `postgresql://${process.env.USER}:${process.env.PASSWORD}@${process.env.HOST}/${process.env.DATABASE}`,
+  connectionString: `postgres://${process.env.USER}:${process.env.PASSWORD}@${process.env.HOST}/${process.env.DATABASE}`,
 });
