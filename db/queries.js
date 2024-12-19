@@ -1,6 +1,12 @@
 const pool = require("./pool");
 
 exports.selectPokemonList = async () => {
+  console.log(
+    process.env.USER,
+    process.env.PASSWORD,
+    process.env.HOST,
+    process.env.DATABASE
+  );
   const { rows } = await pool.query("select * from pokemons order by id");
   return rows;
 };
